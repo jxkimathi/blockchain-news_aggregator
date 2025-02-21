@@ -1,15 +1,22 @@
 {
   "name": "Blockchain News Aggregator",
-  "description": "An interval-based integration that fetches the latest blockchain news articles and sends them to a Telex channel.",
   "type": "interval",
-  "settings": {
-    "interval": "hourly"
-  },
-  "endpoints": [
+  "description": "Fetches and sends the latest blockchain news articles to the channel at regular intervals.",
+  "settings": [
     {
-      "url": "https://data-api.coindesk.com/news/v1/article/list?lang=EN&limit=5",
-      "method": "GET"
+      "key": "interval",
+      "type": "number",
+      "label": "Interval (minutes)",
+      "default": 60,
+      "required": true
+    },
+    {
+      "key": "source",
+      "type": "string",
+      "label": "News Source",
+      "default": "blockchain",
+      "required": true
     }
   ],
-  "webhookUrl": "https://ping.telex.im/v1/webhooks/01951908-d8ec-7fce-ba21-b082b10917a8"
+  "permissions": ["send_messages"]
 }
