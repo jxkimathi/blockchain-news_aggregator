@@ -1,7 +1,7 @@
 {
   "name": "Blockchain News Aggregator",
   "type": "interval",
-  "description": "Fetches and sends the latest blockchain news articles to the channel at regular intervals.",
+  "descriptions": "Fetches and sends the latest blockchain news articles to the channel at regular intervals.",
   "settings": [
     {
       "key": "interval",
